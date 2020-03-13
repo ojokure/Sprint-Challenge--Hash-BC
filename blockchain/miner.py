@@ -13,6 +13,8 @@ import json
 import random
 
 
+# proof = random.choice([ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65])
+
 def proof_of_work(last_proof):
     """
     Multi-Ouroboros of Work Algorithm
