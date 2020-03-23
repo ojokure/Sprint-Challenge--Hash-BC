@@ -13,7 +13,20 @@ def get_indices_of_item_weights(weights, length, limit):
     YOUR CODE HERE
     """
 
-    return None
+    if length <= 1:
+        return None
+
+    for index, weight in enumerate(weights):
+        hash_table_insert(ht, weight, index)
+
+    output = []
+    for smaller_index, weight in enumerate(weights):
+        higher_index = hash_table_retrieve(ht, limit - weight)
+        if higher_index:
+            output = [higher_index, smaller_index]
+            break
+
+    return output
 
 
 def print_answer(answer):
